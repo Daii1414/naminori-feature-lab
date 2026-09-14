@@ -21,6 +21,11 @@ YouTubeで自動吹き替え（オートダビング）が使用されている�
 
 詳細およびテスト手順については、[`features/001-dubbing-antidote/README.md`](./features/001-dubbing-antidote/README.md) を参照してください。
 
-## License
+###
+
+<div align="center">
+
+  # LICENSE
+
 
 This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
