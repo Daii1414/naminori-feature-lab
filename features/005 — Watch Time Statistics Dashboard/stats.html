@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Статистика погружения в японский</title>
+  <link rel="stylesheet" href="stats.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div>
+        <h1 class="title">Статистика</h1>
+        <p class="subtitle">Ваш путь в погружение в японский</p>
+      </div>
+      <div class="header-actions">
+        <button id="exportBtn" class="btn">📥 Экспорт</button>
+      </div>
+    </div>
+
+    <div class="filters">
+      <button class="filter-pill active" data-level="all">Все уровни</button>
+      <button class="filter-pill" data-level="3">N3</button>
+      <button class="filter-pill" data-level="2">N2</button>
+      <button class="filter-pill" data-level="1">N1</button>
+    </div>
+
+    <div class="metrics-grid">
+      <div class="metric-card">
+        <div class="metric-label">⏱️ Общее время просмотра</div>
+        <div id="totalTime" class="metric-value">0с</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-label">📺 Просмотрено видео</div>
+        <div id="totalVideos" class="metric-value">0</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-label">📅 На этой неделе</div>
+        <div id="weekTime" class="metric-value">0с</div>
+      </div>
+    </div>
+
+    <div class="section-card">
+      <h2 class="section-title">Ежедневная активность</h2>
+      <div id="heatmapGrid" class="heatmap-grid"></div>
+      <div class="heatmap-legend">
+        <span>Меньше</span>
+        <div class="legend-squares">
+          <div class="heatmap-cell"></div>
+          <div class="heatmap-cell level-1"></div>
+          <div class="heatmap-cell level-2"></div>
+          <div class="heatmap-cell level-3"></div>
+          <div class="heatmap-cell level-4"></div>
+        </div>
+        <span>Больше</span>
+      </div>
+    </div>
+
+    <div class="section-card">
+      <h2 class="section-title">Недавно просмотренные</h2>
+      <div id="historyList">
+        <!-- Динамический список -->
+      </div>
+    </div>
+  </div>
+
+  <script src="stats.js"></script>
+</body>
+</html>

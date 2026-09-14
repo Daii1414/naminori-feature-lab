@@ -1,0 +1,154 @@
+:root {
+  --nt-text-primary: #0f0f0f;
+  --nt-text-secondary: #606060;
+  --nt-bg-chip: #f2f2f2;
+  --nt-outline: #e2e2e2;
+  --nt-overlay: rgba(0, 0, 0, .05);
+  --nt-bg-base: #ffffff;
+  --nt-bg-tip: #333333;
+}
+
+html[dark], html.dark {
+  --nt-text-primary: #f1f1f1;
+  --nt-text-secondary: #aaaaaa;
+  --nt-bg-chip: #272727;
+  --nt-outline: #3d3d3d;
+  --nt-overlay: rgba(255, 255, 255, .1);
+  --nt-bg-base: #0f0f0f;
+  --nt-bg-tip: #111111;
+}
+
+/* Бейдж в ленте */
+.nt-jlpt-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  border-radius: 2px !important;
+  padding: 0 4px !important;
+  font-family: Roboto, Arial, sans-serif !important;
+  font-size: 1.2rem !important;
+  line-height: 1.8rem !important;
+  font-weight: 500 !important;
+  color: var(--nt-text-secondary) !important;
+  background: var(--nt-overlay) !important;
+  white-space: nowrap !important;
+  align-self: flex-start !important;
+  user-select: none !important;
+  margin-top: 4px !important;
+}
+
+ytd-badge-supported-renderer:has(div) + .nt-jlpt-badge {
+  margin-left: 4px !important;
+}
+
+/* --- СТИЛИ ПАНЕЛИ СТАТИСТИКИ ПОД ВИДЕО (Difficulty Box) --- */
+.nt-db-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  background-color: var(--nt-bg-chip);
+  border-radius: 12px;
+  padding: 10px 16px;
+  margin-bottom: 16px;
+  font-family: 'Roboto', 'Arial', sans-serif;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.nt-db-sep {
+  color: var(--nt-text-secondary);
+  opacity: 0.4;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  user-select: none;
+}
+
+.nt-db-vocab-bar {
+  display: flex;
+  border-radius: 3px;
+  overflow: hidden;
+  height: 12px;
+  width: 160px;
+  max-width: 100%;
+  min-width: 0;
+  flex-shrink: 1;
+}
+
+.nt-db-seg-label {
+  font-size: 7px;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.55);
+  user-select: none;
+}
+
+.nt-tip-anchor {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.nt-tip {
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--nt-bg-tip, #111);
+  color: #f1f1f1;
+  font-size: 1.1rem;
+  line-height: 1.6rem;
+  padding: 3px 7px;
+  border-radius: 4px;
+  width: max-content;
+  box-sizing: border-box;
+  max-width: min(20rem, 100vw - 16px);
+  white-space: normal;
+  pointer-events: none;
+  z-index: 9999;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.nt-db-stat, .nt-db-dist, .nt-db-badge-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.nt-db-dist {
+  flex: 0 1 auto;
+  min-width: 0;
+}
+
+.nt-db-dist-bar-row {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-width: 0;
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+
+.nt-db-stat-label, .nt-db-dist-label, .nt-db-badge-sub {
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--nt-text-secondary);
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.nt-db-stat-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--nt-text-primary);
+  white-space: nowrap;
+}
+
+.nt-db-stat-suffix {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--nt-text-secondary);
+}

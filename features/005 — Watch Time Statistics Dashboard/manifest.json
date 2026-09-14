@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Naminori Feature: Watch Time Statistics",
+  "version": "1.0.0",
+  "description": "Standalone reference implementation for tracking Japanese immersion watch time and displaying the stats dashboard.",
+  "permissions": ["storage"],
+  "action": {
+    "default_popup": "stats.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/watch*"],
+      "js": ["tracker.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Naminori Feature: JLPT Difficulty & Statistics Analyzer",
+  "version": "1.0.0",
+  "description": "Full original NihongoTube implementation for JLPT analysis, WPM, and immersion statistics box.",
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "css": ["content.css"],
+      "js": ["dict.js", "analyzer.js", "content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
