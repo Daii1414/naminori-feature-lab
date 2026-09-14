@@ -16,6 +16,36 @@
 
 <div align="center">
 
+## 🛠️ Core Principles & Architecture
+
+</div>
+
+当リポジトリのコードは、メインの商用プロジェクトへスムーズに移植（インテグレーション）できるよう、以下の設計基準を厳守して開発されています。
+
+- **Manifest V3:** すべての機能は最新の Chrome Extensions Manifest V3 に準拠しています。
+- **Pure Vanilla JS:** 余計なフレームワーク（ReactやVue等）や重いビルドツール（ViteやWebpack等）を使わず、軽量なバニラJSで実装しています。
+- **完全な機能分離 (Isolation):** 各機能は `features/XXX-feature-name/` 配下に完全に独立して格納されており、単体で動作・テストが可能です。
+- **リファレンс実装 (Reference Implementation):** メインプロジェクトの開発者やAIコーディングエージェントが、そのままコードやアーキテクチャを持ち帰って統合できる設計にしています。
+
+---
+
+<div align="center">
+
+## 📑 Quick Navigation
+
+</div>
+
+- [001 — Dubbing Antidote](#001--dubbing-antidote)
+- [002 — Hide Non-Japanese Videos](#002--hide-non-japanese-videos)
+- [003 — Filter Non-Japanese Comments](#003--filter-non-japanese-comments)
+- [004 — JLPT Difficulty Analyzer & Badge](#004--jlpt-difficulty-analyzer--badge)
+- [005 — Watch Time Statistics Dashboard](#005--watch-time-statistics-dashboard)
+- [006 — Anki Comprehension Bar](#006--anki-comprehension-bar)
+
+---
+
+<div align="center">
+
 ## Features
 
 </div>
