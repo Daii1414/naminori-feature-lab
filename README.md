@@ -40,6 +40,27 @@ YouTubeで自動吹き替え（オートダビング）が使用されている�
 
 ###
 
+### 002 — Hide Non-Japanese Videos
+
+YouTubeのホーム画面、検索結果、サイドバー（関連動画）、Shortsから日本語以外の動画を自動で非表示にし、グリッドのレイアウト崩れや空白の隙間を修復します。
+
+**ステータス:** 動作確認済み
+
+**主な機能:**
+
+- Unicode文字体系（ひらがな・カタカナ・漢字）による日本語タイトル判定
+- 顔文字や英語クリッカブルタグの誤判定防止（ノイズ検出時の3文字種必須ルール）
+- ホーム、検索、関連動画サイドバー、チャンネル動画、Shortsカルーセルに対応
+- YouTubeの行コンテナ（`ytd-rich-grid-row`）のフラット化による隙間のないシームレスなグリッド再配置
+- 動画がすべて非表示になった空のシェルフ（Shortsやニュース枠）の自動非表示
+- YouTubeのSPAナビゲーションおよび仮想DOMリサイクルに対応（タイトル更新の追跡）
+- 連続非表示により画面が空いた場合の無限スクロール自動補充トリガー
+- 外部ライブラリ不要（Pure Vanilla JS & CSS）、Chrome拡張機能 Manifest V3
+
+詳細およびテスト手順については、[`features/002-hide-non-japanese-video/README.md`](./features/002-hide-non-japanese-video/README.md) を参照してください。
+
+###
+
 <div align="center">
 
 ## License
