@@ -1,22 +1,22 @@
 # JP Immersion Extension Features
 
-Standalone implementations and prototypes of features intended for integration into the main JP Immersion Chrome extension.
+メインの「JP Immersion」Chrome拡張機能への統合を想定した、各種機能の実装およびプロトタイプをまとめたリポジトリです。
 
-Each feature is independently testable as a Chrome Extension and is developed separately from the closed-source main project.
+各機能は単体のChrome拡張機能として個別にテストでき、メインプロジェクトとは分離して開発されています。
 
-## Features
+## 機能
 
 ### 001 — Dubbing Antidote
 
-Automatically switches YouTube auto-dubbed audio back to the Japanese original audio track when available.
+YouTubeで自動吹き替え（オートダビング）が使用されている場合、日本語のオリジナル音声トラックに自動的に切り替えます。
 
-**Status:** Working prototype
+**ステータス:** 動作確認済みプロトタイプ
 
-- Chrome Extension Manifest V3
-- YouTube audio track detection
-- Japanese original audio detection
-- Automatic switching from auto-dub to Japanese original
-- YouTube SPA navigation support
-- Retry logic for asynchronously loaded players
+- Chrome拡張機能 Manifest V3
+- YouTubeの音声トラック検出
+- 日本語オリジナル音声の検出
+- 自動吹き替えから日本語オリジナル音声への自動切り替え
+- YouTube SPAナビゲーションへの対応
+- 非同期で読み込まれるプレーヤーへのリトライ処理
 
-See `features/001-dubbing-antidote/README.md` for details and testing instructions.
+詳細およびテスト手順については、`features/001-dubbing-antidote/README.md` を参照してください。
