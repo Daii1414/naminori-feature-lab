@@ -81,6 +81,9 @@ Video cards and watch pages are enriched with accurate linguistic difficulty met
 
 ## 10. Critical Parts to Preserve During Integration
 
+### ⚠️ Note on Algorithm Limitations & Future Rework
+While the current weighted frequency scoring formula (`evaluateJLPT`) is fully functional and stable for a reference prototype, **the core difficulty estimation algorithm itself is intended to be overhauled or rewritten** during final integration into the main project. The main developer/AI agent should feel free to replace or heavily upgrade the scoring heuristic to incorporate grammar parsing, LLM-based calibration, or advanced corpus analysis if higher precision is required.
+
 1. **iOS Client Emulation for Subtitle Discovery:**
    - Always query `/youtubei/v1/player` with headers `X-YouTube-Client-Name: 5` and client payload `clientName: "IOS"`. Web clients require complex botguard tokens that fail in extension context; iOS clients bypass this effortlessly.
 2. **RegEx XML Subtitle Parsing (`downloadTranscript`):**
