@@ -8,7 +8,7 @@
 
 <br>
 
-![License](https://img.shields.io/github/license/Daii1414/Naminori-feature-lab?style=flat&logo=license&logoColor=white&color=3da639)
+[![License](https://img.shields.io/github/license/Daii1414/Naminori-feature-lab?style=flat&logo=license&logoColor=white&color=3da639)](./LICENSE)
 
 </div>
 
@@ -42,19 +42,8 @@ YouTubeで自動吹き替え（オートダビング）が使用されている�
 
 <div align="center">
 
-## Development
+## License
+
+This project is licensed under the [MIT License](./LICENSE).
 
 </div>
-
-各機能はメインプロジェクトとは独立して開発・テストされます。
-
-```text
-Idea
-  ↓
-Standalone implementation
-  ↓
-Testing
-  ↓
-Validation
-  ↓
-Integration into Naminori
