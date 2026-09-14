@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Naminori Feature: Filter Non-Japanese Comments",
+  "version": "1.0.0",
+  "description": "Filters out non-Japanese YouTube comments and provides a Reveal button to toggle them.",
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "css": ["content.css"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
