@@ -104,6 +104,7 @@ YouTubeの動画字幕をバックグラウンドで解析し、日本語の難�
 現在の実装はプロトタイプとして問題なく動作し実用的な結果を出しますが、単語の単純な出現回数に基づく加重平均を行っているため、文脈や文法構造を考慮した高度な判定精度を求める場合、将来的に評価アルゴリズム全体の本格的な見直しや再設計が必要になります。
 
 詳細およびテスト手順については、[`features/004-jlpt-difficulty-badge/README.md`](./features/004-jlpt-difficulty-badge/README.md) を参照してください。
+
 ###
 
 ### 005 — Watch Time Statistics Dashboard
@@ -123,6 +124,28 @@ YouTubeの動画字幕をバックグラウンドで解析し、日本語の難�
 - Chrome Storage API を活用したローカルデータ永続化
 
 詳細およびテスト手順については、[`features/005-watch-time-statistics/README.md`](./features/005-watch-time-statistics/README.md) を参照してください。
+
+###
+
+### 006 — Anki Comprehension Bar
+
+Anki-Connect経由でローカルのAnkiデッキから語彙データを取得し、ウェブページ上の日本語テキストをリアルタイムで解析して、ユーザー自身の語彙力に基づいたテキスト理解度（Comprehension %）を算出・表示します。
+
+**ステータス:** プロトタイプ実装完了（※UI/UX未洗練・要デザイン改善）
+
+**主な機能:**
+
+- Anki-Connect (`http://localhost:8765`) を利用したローカルAnkiの全デッキ一覧の自動取得と、選択したデッキの語彙データの非同期読み込み
+- ブラウザ標準の `Intl.Segmenter` による高速な日本語単語のトークナイゼーション（外部ライブラリ不要）
+- ページ上のテキストからユニークな日本語単語を抽出し、Ankiの習得語彙リストと照合してテキストの理解度（Comprehension %）を算出
+- ページ上部への簡易的なトップステータスバー（デッキ選択ドロップダウン、接続インジケータ、Syncボタン付き）のインジェクション
+- ページの動的な変化やスクロール（SPA・無限スクロール）に対応する自動再解析トリガー
+- Chrome拡張機能 Manifest V3、外部ライブラリゼロ
+
+**⚠️ UI/UXに関する注意点:**
+現時点ではコアとなるロジックと動作するベースライン（基本機能）のコード実装のみが行われており、外観デザインや洗練されたパネルUI/UXの構築は行われていません。本格的な運用には、デザインの刷新やUIの拡張・ブラッシュアップが必要となります。
+
+詳細およびテスト手順については、[`features/006-anki-comprehension-bar/README.md`](./features/006-anki-comprehension-bar/README.md) を参照してください。
 
 ###
 
