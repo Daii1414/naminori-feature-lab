@@ -79,7 +79,7 @@ YouTubeの動画再生ページ（Watch page）で日本語以外のコメント
 - 動画切り替え時のSPAナビゲーション対応
 - Chrome拡張機能 Manifest V3、外部ライブラリゼロ
 
-詳細およびテスト手順については、[`features/003-filter-non-japanese-comments/README.md`](./features/004-filter-non-japanese-comments/README.md) を参照してください。
+詳細およびテスト手順については、[`features/003-filter-non-japanese-comments/README.md`](./features/003-filter-non-japanese-comments/README.md) を参照してください。
 
 ###
 
@@ -100,7 +100,7 @@ YouTubeの動画字幕をバックグラウンドで解析し、日本語の難�
 - ホームフィード、検索結果、関連動画サイドバーへのバッジ自動挿入
 - Chrome拡張機能 Manifest V3
 
-詳細およびテスト手順については、[`features/004-jlpt-difficulty-badge/README.md`](./features/005-jlpt-difficulty-badge/README.md) を参照してください。
+詳細およびテスト手順については、[`features/004-jlpt-difficulty-badge/README.md`](./features/004-jlpt-difficulty-badge/README.md) を参照してください。
 
 ###
 
@@ -120,7 +120,7 @@ YouTubeの動画字幕をバックグラウンドで解析し、日本語の難�
 - Chrome拡張機能のポップアップおよびオプションページ（`stats.html`）としての独立動作
 - Chrome Storage API を活用したローカルデータ永続化
 
-詳細およびテスト手順については、[`features/005-watch-time-statistics/README.md`](./features/006-watch-time-statistics/README.md) を参照してください。
+詳細およびテスト手順については、[`features/005-watch-time-statistics/README.md`](./features/005-watch-time-statistics/README.md) を参照してください。
 
 ###
 
