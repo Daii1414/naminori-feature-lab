@@ -59,6 +59,24 @@ YouTubeのホーム画面、検索結果、サイドバー（関連動画）、S
 
 詳細およびテスト手順については、[`features/002-hide-non-japanese-video/README.md`](./features/002-hide-non-japanese-video/README.md) を参照してください。
 
+### 003 — Filter Non-Japanese Comments
+
+YouTubeの動画再生ページ（Watch page）で日本語以外のコメントを非表示にし、ネイティブの日本語コメントのみを表示します。「Reveal Comments」ボタンでいつでも一時表示が可能です。
+
+**ステータス:** 動作確認済み
+
+**主な機能:**
+
+- Unicode文字体系による日本語コメント判定
+- 英語・ロシア語などの外国語コメントの自動非表示
+- ヘッダーへの「Reveal Comments（非表示件数）」切り替えボタンの自動挿入
+- 表示切り替え時に非表示対象だったコメントを半透明（65%）で識別表示
+- YouTubeのコメント無限スクロール読み込みに対応
+- 動画切り替え時のSPAナビゲーション対応
+- Chrome拡張機能 Manifest V3、外部ライブラリゼロ
+
+詳細およびテスト手順については、[`features/003-filter-non-japanese-comments/README.md`](./features/003-filter-non-japanese-comments/README.md) を参照してください。
+
 ###
 
 <div align="center">
