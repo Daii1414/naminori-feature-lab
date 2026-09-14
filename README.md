@@ -1,14 +1,14 @@
 <div align="center">
 
-# Naminori Feature Lab
+  # Naminori Feature Lab
 
-メインの「Naminori」Chrome拡張機能への統合を想定した、各種機能の実装およびプロトタイプをまとめたリポジトリです。
+  メインの「Naminori」Chrome拡張機能への統合を想定した、各種機能の実装およびプロトタイプをまとめたリポジトリです。
 
-各機能は単体のChrome拡張機能として個別にテストでき、メインプロジェクトとは分離して開発されています。
+  各機能は単体のChrome拡張機能として個別にテストでき、メインプロジェクトとは分離して開発されています。
 
-<br>
+  <br>
 
-[![License](https://img.shields.io/github/license/Daii1414/Naminori-feature-lab?style=flat&logo=license&logoColor=white&color=3da639)](./LICENSE)
+  [![License](https://img.shields.io/github/license/Daii1414/Naminori-feature-lab?label=&style=flat&logo=license&logoColor=white&color=3da639)](./LICENSE)
 
 </div>
 
