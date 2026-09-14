@@ -1,4 +1,4 @@
-# 004 — Filter Non-Japanese Comments
+# 003-filter-non-japanese-comments
 
 A standalone reference implementation that filters out non-Japanese YouTube comment threads on the Watch page and injects an inline "Reveal Comments" toggle button into YouTube's comments header without causing performance degradation or CPU lockups.
 
