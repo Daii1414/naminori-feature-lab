@@ -1,5 +1,4 @@
-# JP Immersion Extension Features
-
+# Naminori-feature-lab
 メインの「JP Immersion」Chrome拡張機能への統合を想定した、各種機能の実装およびプロトタイプをまとめたリポジトリです。
 
 各機能は単体のChrome拡張機能として個別にテストでき、メインプロジェクトとは分離して開発されています。
