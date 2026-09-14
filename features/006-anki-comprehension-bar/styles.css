@@ -1,0 +1,74 @@
+#naminori-comprehension-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 36px;
+    background-color: #111827;
+    color: #f3f4f6;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    z-index: 2147483647; /* Максимальный z-index, чтобы перекрывать любые элементы сайтов */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    box-sizing: border-box;
+    padding: 0 16px;
+}
+
+.naminori-bar-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.naminori-status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #ef4444;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+#naminori-deck-select {
+    background-color: #1f2937;
+    color: #f3f4f6;
+    border: 1px solid #374151;
+    border-radius: 4px;
+    padding: 3px 8px;
+    font-size: 12px;
+    outline: none;
+    max-width: 200px;
+    cursor: pointer;
+}
+
+#naminori-deck-select:hover {
+    border-color: #4b5563;
+}
+
+.naminori-metric {
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.naminori-divider {
+    color: #4b5563;
+}
+
+#naminori-sync-btn {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 4px 10px;
+    font-size: 11px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+#naminori-sync-btn:hover {
+    background-color: #1d4ed8;
+}

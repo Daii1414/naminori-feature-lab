@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Naminori Anki Comprehension Bar",
+  "version": "1.0.0",
+  "description": "Real-time Japanese text comprehension analyzer using your local Anki deck via Anki-Connect.",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "http://localhost:8765/*",
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
