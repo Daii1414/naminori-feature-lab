@@ -20,3 +20,7 @@ YouTubeで自動吹き替え（オートダビング）が使用されている�
 - 非同期で読み込まれるプレーヤーへのリトライ処理
 
 詳細およびテスト手順については、`features/001-dubbing-antidote/README.md` を参照してください。
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
