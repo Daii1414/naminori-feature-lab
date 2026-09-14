@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Feature 001: Hide Non-Japanese Videos",
+  "version": "1.0",
+  "description": "Standalone reference implementation that filters out non-Japanese YouTube videos.",
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "css": ["src/content.css"],
+      "js": ["src/content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
