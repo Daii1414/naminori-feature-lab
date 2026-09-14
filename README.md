@@ -59,6 +59,8 @@ YouTubeのホーム画面、検索結果、サイドバー（関連動画）、S
 
 詳細およびテスト手順については、[`features/002-hide-non-japanese-video/README.md`](./features/002-hide-non-japanese-video/README.md) を参照してください。
 
+###
+
 ### 003 — Filter Non-Japanese Comments
 
 YouTubeの動画再生ページ（Watch page）で日本語以外のコメントを非表示にし、ネイティブの日本語コメントのみを表示します。「Reveal Comments」ボタンでいつでも一時表示が可能です。
@@ -71,11 +73,54 @@ YouTubeの動画再生ページ（Watch page）で日本語以外のコメント
 - 英語・ロシア語などの外国語コメントの自動非表示
 - ヘッダーへの「Reveal Comments（非表示件数）」切り替えボタンの自動挿入
 - 表示切り替え時に非表示対象だったコメントを半透明（65%）で識別表示
+- CPU負荷を防ぐための `requestAnimationFrame` による描画スロットリング
+- プレーヤーのタイムライン更新による不要な再描画を防ぐコメントセクションのスコープ監視
 - YouTubeのコメント無限スクロール読み込みに対応
 - 動画切り替え時のSPAナビゲーション対応
 - Chrome拡張機能 Manifest V3、外部ライブラリゼロ
 
-詳細およびテスト手順については、[`features/003-filter-non-japanese-comments/README.md`](./features/003-filter-non-japanese-comments/README.md) を参照してください。
+詳細およびテスト手順については、[`features/003-filter-non-japanese-comments/README.md`](./features/004-filter-non-japanese-comments/README.md) を参照してください。
+
+###
+
+### 004 — JLPT Difficulty Analyzer & Badge
+
+YouTubeの動画字幕をバックグラウンドで解析し、日本語の難易度（JLPT N5〜N1）を自動算出して動画カードと再生ページに難易度バッジおよび詳細な統計ボックスを表示します。
+
+**ステータス:** 動作確認済み
+
+**主な機能:**
+
+- YouTubeの内部API（`/youtubei/v1/player`）経由での字幕データ（timedtext）の軽量取得（iOSクライアントエミュレーション）
+- ブラウザ標準の `Intl.Segmenter` による高速な単語分割（外部ライブラリ不要）
+- 内蔵JLPT単語辞書（N5〜N1）に基づいた難易度加重スコアの算出
+- 自動生成字幕（ASR）と手動字幕の判別表示（`*` マーク）
+- 重複リクエストを防止するインフライトキャッシュ
+- 再生ページ下の詳細統計ボックス（WPM、総単語数、文字数、語彙レベル分布グラフ）のレンダリング
+- ホームフィード、検索結果、関連動画サイドバーへのバッジ自動挿入
+- Chrome拡張機能 Manifest V3
+
+詳細およびテスト手順については、[`features/004-jlpt-difficulty-badge/README.md`](./features/005-jlpt-difficulty-badge/README.md) を参照してください。
+
+###
+
+### 005 — Watch Time Statistics Dashboard
+
+日本語の動画視聴時間を正確に計測し、GitHub風のヒートマップ、総視聴時間、直近の視聴履歴、JLPTレベル別の内訳を確認できる統計ダッシュボードを提供します。
+
+**ステータス:** 動作確認済み
+
+**主な機能:**
+
+- HTML5ビデオプレイヤーの稼働時間を監視し、アクティブな日本語学習時間のみを高精度で計測
+- 広告や一時停止、バックグラウンドタブでの無駄な時間計測の自動除外
+- 過去1年間の毎日の学習量を視覚化するGitHub風のフレックスボックス・ヒートマップ
+- 直近の視聴履歴（サムネイル、タイトル、JLPTバッジ、チャンネル名、視聴時間）の自動リスト化
+- データのJSONエクスポート機能
+- Chrome拡張機能のポップアップおよびオプションページ（`stats.html`）としての独立動作
+- Chrome Storage API を活用したローカルデータ永続化
+
+詳細およびテスト手順については、[`features/005-watch-time-statistics/README.md`](./features/006-watch-time-statistics/README.md) を参照してください。
 
 ###
 
