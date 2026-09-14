@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "My Japanese YouTube Immersion Tool",
+  "version": "0.1.1",
+  "description": "Locally-built Japanese immersion helper for YouTube (filtering, audio track switching, watch time tracking).",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "JP Immersion"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "permissions": [
+    "storage",
+    "scripting"
+  ],
+  "host_permissions": [
+    "*://*.youtube.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.youtube.com/*"
+      ],
+      "js": [
+        "content-script.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
